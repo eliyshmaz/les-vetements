@@ -32,9 +32,10 @@ Route::delete('/cart/clear',[Cartcontroller::class ,'clearItem'])->name('cart.cl
 
 Route::get('/Wishlist',[WishlistController::class,'getwishlistedproduct'])->name('Wishlist.list');
 route::post('/Wishlist/add',[WishlistController::class,'AddproductroWishlist'])->name('Wishlist.store');
+Route::get('/Wishlist',[WishlistController::class,'getwishlistedproduct'])->name('Wishlist.list');
 Route::delete('/Wishlist/clear',[WishlistController::class,"clearwishlist"])->name('Wishlist.clear');
 route::delete('/Wishlist/remove',[WishlistController::class,'removeproductfromwishlist'])->name('Wishlist.remove');
-
+route::post('/Wishlist/move-to-cart',[WishlistController::class , "Movetocart"])->name('Wishlist.move.to.cart');
 
 
 Auth::routes();
